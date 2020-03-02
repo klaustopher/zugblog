@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Train Lines</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Vzg number</th>
+      <th>Alt names</th>
+      <th>Osm</th>
+      <th>Line</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @train_lines.each do |train_line| %>
+      <tr>
+        <td><%= train_line.name %></td>
+        <td><%= train_line.vzg_number %></td>
+        <td><%= train_line.alt_names %></td>
+        <td><%= train_line.osm_id %></td>
+        <td><%= train_line.line %></td>
+        <td><%= link_to 'Show', train_line %></td>
+        <td><%= link_to 'Edit', edit_train_line_path(train_line) %></td>
+        <td><%= link_to 'Destroy', train_line, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Train Line', new_train_line_path %>

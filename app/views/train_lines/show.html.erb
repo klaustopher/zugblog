@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @train_line.name %>
+</p>
+
+<p>
+  <strong>Vzg number:</strong>
+  <%= @train_line.vzg_number %>
+</p>
+
+<p>
+  <strong>Alt names:</strong>
+  <%= @train_line.alt_names %>
+</p>
+
+<p>
+  <strong>Osm:</strong>
+  <%= @train_line.osm_id %>
+</p>
+
+<p>
+  <strong>Line:</strong>
+  <%= @train_line.line %>
+</p>
+
+<%= link_to 'Edit', edit_train_line_path(@train_line) %> |
+<%= link_to 'Back', train_lines_path %>

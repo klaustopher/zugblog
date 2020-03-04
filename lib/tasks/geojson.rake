@@ -16,6 +16,10 @@ namespace :geojson do
       elsif feature['geometry']['type'] == 'MultiLineString'
         next if feature['properties']['ref'] !~ /\A\d{4}\Z/
         # line
+        puts "Train Line (ML) *#{feature['properties']['ref']}* #{feature['properties']['name']}, #{feature['properties']['alt_name']}"
+      elsif feature['geometry']['type'] == 'LineString'
+        next if feature['properties']['ref'] !~ /\A\d{4}\Z/
+        # line
         puts "Train Line *#{feature['properties']['ref']}* #{feature['properties']['name']}, #{feature['properties']['alt_name']}"
       end
     end

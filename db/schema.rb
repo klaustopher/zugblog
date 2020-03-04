@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2020_03_02_181206) do
     t.integer "vzg_number"
     t.string "alt_names", array: true
     t.string "osm_id"
-    t.geography "line", limit: {:srid=>4326, :type=>"line_string", :geographic=>true}
+    t.geography "line", limit: {:srid=>4326, :type=>"multi_line_string", :geographic=>true}
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
